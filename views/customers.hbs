@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<p>{{status}}</p>
+
+<h2 id="overskrift">Følgende customers er i databasen:</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Adress</th>
+    </tr>
+    {{#each customers}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{address}}</td>
+    </tr>
+    {{/each}}
+</table>
