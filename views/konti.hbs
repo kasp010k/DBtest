@@ -1,0 +1,36 @@
+<h2 id="overskrift">Følgende konti er i databasen:</h2>
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<table class="table">
+    <tr>
+        <th>kontonr</th>
+        <th>kunde</th>
+        <th>indestående</th>
+        <th>rente</th>
+    </tr>
+    {{#each konti}}
+    <tr>
+        <td>{{kontonr}}</td>
+        <td>{{kunde}}</td>
+        <td>{{indestående}}</td>
+        <td>{{rente}}</td>
+    </tr>
+    {{/each}}
+</table>

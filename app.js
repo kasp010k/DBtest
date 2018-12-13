@@ -7,9 +7,10 @@ var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var hundeRouter = require('./routes/hunde');
+var kontiRouter = require('./routes/konti');
 var myDBRouter = require('./routes/myDB');
 var customersRouter = require('./routes/customers');
+var insertdocRouter = require('./routes/insertdoc');
 
 var app = express();
 
@@ -33,9 +34,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/hunde', hundeRouter);
+app.use('/konti', kontiRouter);
 app.use('/myDB', myDBRouter);
 app.use('/customers', customersRouter);
+app.use('/insertdoc', insertdocRouter);
 
 app.use(bodyParser.json());
 
